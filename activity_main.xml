@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.saadqamer.rex2.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/scoreLabel"
+        android:text="Score"
+        android:gravity="center_horizontal"
+        android:background="@android:color/darker_gray" />
+
+    <CheckBox
+        android:text="AZ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scoreLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/checkBox"
+        android:checked="true" />
+
+    <CheckBox
+        android:text="0-9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scoreLabel"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/digitCheck"
+        android:checked="true" />
+
+    <CheckBox
+        android:text="^$"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scoreLabel"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/anchorCheck"
+        android:checked="true" />
+
+    <TextView
+        android:text="regex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/digitCheck"
+        android:layout_alignLeft="@+id/digitCheck"
+        android:layout_alignStart="@+id/digitCheck"
+        android:id="@+id/regexLabel" />
+
+    <Button
+        android:text="Check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stringEdit"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/checkButton"
+        android:onClick="checkButtonClicked (MainActivity)" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/checkButton"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/scrollView">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/log" />
+    </ScrollView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginTop="14dp"
+        android:id="@+id/stringEdit"
+        android:hint="Enter String Here"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_below="@+id/regexLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>
